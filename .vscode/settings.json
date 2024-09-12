@@ -1,0 +1,22 @@
+{
+    "ltex.language": "de-DE",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                "-file-line-error",
+                "-pdf",
+                "-bibtex",
+                "-outdir=%OUTDIR%",
+                "-auxdir=%OUTDIR%/buildfiles",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ]
+}

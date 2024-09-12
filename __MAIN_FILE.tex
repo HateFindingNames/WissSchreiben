@@ -1,0 +1,77 @@
+\documentclass[%
+fontsize=10,%
+% twocolumn,%
+onecolumn,%
+% headings=normal,%
+% parskip=false,%
+% footsepline=false,%
+% footinclude=true,%
+BCOR=0pt,%
+DIV=15,%
+overfullrule=true,%
+titlepage=false,%
+% notitlepage,%
+% abstract=false,% abstract heading switch
+% oneside%
+]{scrartcl}
+\addtokomafont{caption}{\footnotesize}
+\addtokomafont{captionlabel}{\footnotesize}
+\usepackage{scrlayer-scrpage}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[maxnames=5]{biblatex}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[per-mode=power,range-units=repeat,separate-uncertainty=true]{siunitx}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\usepackage{siunitx}
+% \crefname{figure}{Abb.}{Abb.}
+% \Crefname{figure}{Abbildung}{Abbildungen}
+\usepackage{hyperref} % Extensive support for hypertext in LaTeX https://www.ctan.org/pkg/hyperref
+\hypersetup{
+    pdftitle={Review Paper | DH | \today},
+    pdfauthor={Dennis Hunter},
+    pdfsubject={Hausarbeit "Wissenschaftliches Schreiben"},
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    colorlinks=true, % Color links instead of disgusting boxes :barfing_emoji:
+    linkcolor={black}, % Color of internal links
+    citecolor={black}, % Color of citations
+    urlcolor={black} % Color of external hyperlinks
+}
+\usepackage{cleveref}
+\usepackage[inkscapearea=page, inkscapelatex=false]{svg}
+% \usepackage[showframe,text={19cm,26.7cm},centering,]{geometry}
+\usepackage{lipsum}
+\addbibresource{literature.bib}
+% \let\endtitlepage\relax
+\usepackage{multicol}
+\begin{document}
+%=================================================================
+\begin{flushleft}
+{\Large Hochschule RheinMain\hfill SS~2024\\}Fachbereich Ingenieurwissenschaften\\M. Sc. Angewandte Physik
+\end{flushleft}
+\vspace{2\baselineskip}
+{%
+\centering
+{\Large Wissenschaftliches Schreiben\\}
+\vspace{2\baselineskip}
+{\huge \textbf{Unterschiede in der Klimaberichterstattung und -kommunikation zwischen globalem Norden und globalem Süden}\\}
+\vspace{\baselineskip}
+{\Large \textbf{Eine deskriptive Metastudie}\\}
+\vspace{2\baselineskip}
+{\large Dennis Hunter\\(Datum: \today)\\}
+\vspace{1\baselineskip}
+}
+%=================================================================
+\input{chap/abstract}
+\vspace{\baselineskip}
+%=================================================================
+\begin{multicols}{2}
+    \input{chap/body}
+\end{multicols}
+%=================================================================
+\printbibliography%
+%=================================================================
+\end{document}

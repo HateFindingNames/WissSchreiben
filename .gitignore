@@ -1,0 +1,5 @@
+buildfiles/
+*synctex.gz
+*svg-raw.pdf
+test/
+literature/
