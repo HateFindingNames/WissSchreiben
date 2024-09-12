@@ -3,7 +3,7 @@ fontsize=10,%
 % twocolumn,%
 onecolumn,%
 % headings=normal,%
-% parskip=false,%
+parskip=false,%
 % footsepline=false,%
 % footinclude=true,%
 BCOR=0pt,%
@@ -16,6 +16,7 @@ titlepage=false,%
 ]{scrartcl}
 \addtokomafont{caption}{\footnotesize}
 \addtokomafont{captionlabel}{\footnotesize}
+\setlength{\parskip}{0em}
 \usepackage{scrlayer-scrpage}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -26,8 +27,6 @@ titlepage=false,%
 \usepackage{csquotes}
 \usepackage{lmodern}
 \usepackage{siunitx}
-% \crefname{figure}{Abb.}{Abb.}
-% \Crefname{figure}{Abbildung}{Abbildungen}
 \usepackage{hyperref} % Extensive support for hypertext in LaTeX https://www.ctan.org/pkg/hyperref
 \hypersetup{
     pdftitle={Review Paper | DH | \today},
@@ -41,12 +40,15 @@ titlepage=false,%
     urlcolor={black} % Color of external hyperlinks
 }
 \usepackage{cleveref}
+\crefname{figure}{Abb.}{Abb.}
+\Crefname{figure}{Abbildung}{Abbildungen}
 \usepackage[inkscapearea=page, inkscapelatex=false]{svg}
 % \usepackage[showframe,text={19cm,26.7cm},centering,]{geometry}
 \usepackage{lipsum}
 \addbibresource{literature.bib}
 % \let\endtitlepage\relax
 \usepackage{multicol}
+% \usepackage[onehalfspacing]{setspace}
 \begin{document}
 %=================================================================
 \begin{flushleft}
@@ -72,6 +74,7 @@ titlepage=false,%
     \input{chap/body}
 \end{multicols}
 %=================================================================
+\newpage
 \printbibliography%
 %=================================================================
 \end{document}
