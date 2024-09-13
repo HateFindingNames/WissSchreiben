@@ -4,7 +4,7 @@ fontsize=10,%
 onecolumn,%
 % headings=normal,%
 parskip=false,%
-% footsepline=false,%
+footsepline=true,%
 % footinclude=true,%
 BCOR=0pt,%
 DIV=15,%
@@ -48,6 +48,7 @@ titlepage=false,%
 \addbibresource{literature.bib}
 % \let\endtitlepage\relax
 \usepackage{multicol}
+\usepackage{orcidlink}
 % \usepackage[onehalfspacing]{setspace}
 \begin{document}
 %=================================================================
@@ -63,7 +64,7 @@ titlepage=false,%
 \vspace{\baselineskip}
 {\Large \textbf{Eine deskriptive Metastudie}\\}
 \vspace{2\baselineskip}
-{\large Dennis Hunter\\(Datum: \today)\\}
+{\large Dennis Hunter\,\orcidlink{0009-0002-5065-1277}\footnote{dennis.hunter@student.hs-rm.de}\\(Datum: \today)\\}
 \vspace{1\baselineskip}
 }
 %=================================================================
@@ -72,9 +73,7 @@ titlepage=false,%
 %=================================================================
 \begin{multicols}{2}
     \input{chap/body}
+    \printbibliography%
 \end{multicols}
-%=================================================================
-\newpage
-\printbibliography%
 %=================================================================
 \end{document}
